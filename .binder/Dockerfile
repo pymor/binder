@@ -6,7 +6,7 @@ ARG NB_UID
 
 USER root
 RUN rm -rf /pymor && useradd -d /pymor --shell /bin/bash -u ${NB_UID} -o -c "" -m ${NB_USER}
-RUN pip install git+https://github.com/pymor/pymor@a270d6ea873a6012aa49629ae645780f35c56c89
+RUN pip install git+https://github.com/pymor/pymor@5ef2e301e770f4f7af949e186a820512bcfd01db
 
 ENV USER=${NB_USER} \
     HOME=/pymor
